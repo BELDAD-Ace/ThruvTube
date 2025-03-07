@@ -1,0 +1,175 @@
+* {
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+    /* width */
+::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0px 5px #7c0061; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #69325ac0; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #424242; 
+  }
+}
+body {font-family:'Roboto Medium';background-color:#3b1c32;}
+header {
+    z-index: 20;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0px 0.5%;
+
+    nav{
+        position: relative;
+        background-color:#1A1A1D;
+        padding: 1vh 2.5vh ;
+        border-radius: 50px;
+        display: flex;
+
+
+
+    img { /*The logo itself*/
+        width: 125px;
+        height: 45px;
+        padding: 0 2vh;
+    }
+
+        input { /*For Sidebar Button closing and opening*/
+            display: none;
+        }
+        label#SIDEMENU { /*Contains the svg and its positioning*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            background-color: #6a1e55;
+            border-radius: 100%;
+            
+        & svg { /*the Acting Button*/
+            padding: 0.8vh 0.8vh;
+            width: 95%;
+            height: 100%;
+        }
+        }
+    .sidebar {
+        /*Transition porperty for HexelOS_animate.css*/
+        transition: left 0.6s ease, background-color 2s ease, backdrop-filter 0.2s ease;
+        background-color: #35353500;
+        
+
+        height: 100%;
+        width: 38vh;
+        display: flex; 
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        left: -38vh; /*Default value if the Sidebar is close*/
+            #CLOSE {
+                    opacity: 0; /*Default value if the Sidebar is close*/
+                    transition: opacity 0.5s ease 0.15s; /*For HexelOS_animate.css*/
+                svg {
+    
+                    background-color: #00000000 ;
+
+                    position: absolute;
+                    top: 2vh;
+                    right: -5%;
+                    fill: #ffffff;
+                    width: 20%;
+                    transition: all 0.5s ease 0.1s;
+                }
+            }
+        .LayerSidebar {
+            label {width:24px;height: 24px;}
+            transition: all 0.8s ease 0.3s;
+            
+            opacity: 0;
+            overflow: hidden;
+            background-color: #5a00385b;
+            
+            position: absolute;
+            top: 1vh;
+            left: 4.7vh;
+            
+            
+            border-radius: 5vh 5vh 5vh 5vh;
+            width:18%;
+            height: 7vh;
+            .userSign {
+                display: flex;
+                
+            svg {
+                padding: 2vh 1vh;
+                width: 50px;
+                height: 50px;
+            }
+            span {
+                
+                padding: 3vh 0vh;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    p#username:hover {
+                        text-decoration: dashed;
+                    }
+                }
+              }  
+            }
+        }
+     }
+    }
+}
+
+.banners {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46vh;
+    background: rgb(53, 53, 53);
+}
+
+.top {
+    padding: 2vh 1vh;
+    h2 {
+        color: white;
+    }
+    .movtop {
+        position: block;
+        overflow-x: scroll;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px;
+        
+
+
+
+            .movtops {
+                padding: 0px 5vh;
+                img {
+                    border-radius: 20px;
+                    width: 150px;
+                }
+            }
+    }
+}

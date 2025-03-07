@@ -1,0 +1,30 @@
+/*ANIMATION TO HEXEL USER INERFACE*/
+
+/*For Input and label Functionalities*/
+#menu_Sidebar:checked ~ .sidebar {
+    background-color:  #00000079;
+    backdrop-filter: blur(10px);
+    left: 0;
+
+
+    .LayerSidebar {
+
+        opacity: 1 ;
+        top: 0;
+        left: 0;
+        border-radius: 0vh 5vh 5vh 0;
+        width: 100%;
+        height: 100%;
+        /*animation: OpeningSidebar 0.7s ease;*/
+    }
+    #CLOSE {
+        opacity: 1;
+        svg {
+            background-color: #000000a2;
+            backdrop-filter: blur(10px);
+            border-radius: 0vh 20vh 20vh 0vh;
+            right: -19.8%;
+
+        }
+    }
+}
